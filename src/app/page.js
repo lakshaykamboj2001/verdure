@@ -1,10 +1,9 @@
-import Image from "next/image";
-import Banner from "./home/components/Banner";
+import LandingHome from "./home/components/LandingHome";
 
 export default function Home() {
   return (
    <>
-       <Banner />
+       <LandingHome />
    </>
   );
 }
