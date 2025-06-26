@@ -1,0 +1,255 @@
+
+ /* ===========mobile header============ */
+
+ .xmobileheader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+  }
+ 
+  .xmobileheader.Product_Page_xmobileheader{
+   position: unset;
+  }
+ 
+  .xmobileheader.scrolled {
+    background-color: #FFF;
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* subtle glow */
+ 
+  }
+ 
+  .xmobileheader.Product_Page_xmobileheader.scrolled{
+   position: fixed;
+   background-color: #FFF;
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* subtle glow */
+  }
+ 
+ 
+  .xmobileheadermenu {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 20px 48px;
+  }
+ 
+  .xmobileheadermenu.scrolled {
+   padding: 10px 48px;
+  }
+  
+ 
+  .xmobileheaderlogos {
+     display: flex;
+     gap: 12px;
+  }
+ 
+  .xmobileheadercart {
+     position: relative;
+  }
+ 
+  .xheaderssearch{
+   cursor: pointer;
+  }
+ 
+  .cart-count-bubble {
+     position: absolute;
+     right: -5px;
+     bottom: 0px;
+     background: black;
+     width: 15px;
+     height: 15px;
+     border-radius: 50%;
+     color: whitesmoke;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 12px;
+ 
+  }
+ 
+  .menu-bar-show-overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.5); 
+     display: none;
+     z-index: 4;
+   }
+   
+ 
+   .menu-bar-show-overlay.active-behind {
+     display: block;
+   }
+ 
+ 
+  .xmobileheaderhidemenu {
+     display: flex;
+    justify-content: end;
+     align-items: center;
+    border-bottom: 1px solid rgba(28, 28, 28, 0.10);
+     padding-bottom: 18px;
+  }
+ 
+  .xmobileheadermenu {
+     overflow: hidden; 
+   }
+ 
+    .xheadermenuopen {
+     cursor: pointer; 
+   }
+ 
+  .xmobileheaderhidemenubg {
+     position: fixed;
+     background-color: #FFF;
+    padding: 30px 40px;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     left: 0;
+    max-width: 430px;
+     transition: 0.3s all;
+     transform: translateX(-100%);
+     z-index: 5;
+   }
+ 
+  .xmobileheaderhidemenubg.active-menu {
+     transform: translateX(0);
+   }
+ 
+   
+ 
+   .xmobileheadermenu {
+     overflow: hidden;
+   }
+ 
+ 
+ 
+  .xmobileheaderhidemenulist ul {
+     list-style: none;
+     padding: 0;
+   }
+ 
+  .accordionlink {
+   color: #1C1C1C;
+   font-family: "Canela Trial";
+   font-size: 24px;
+   font-weight: 300;
+   text-transform: capitalize;
+  }
+ 
+  .splitaccordiontext ul li a {
+     color: #000;
+    font-family: "Neue Haas Grotesk Display Pro";
+     font-size: 16px;
+     font-weight: 400;
+     text-transform: uppercase;
+     text-decoration: none;
+   }
+ 
+  .xmobileheaderhidemenulist ul li {
+    padding-bottom: 25px;
+  }
+ 
+  .xmobileheaderhidemenulist ul li:last-child {
+   padding-bottom: 0;
+  }
+ 
+  .xmobileheaderhidemenulist {
+    /* padding-top: 40px; */
+     overflow-y: auto;
+    /* height: 100%; */
+ }
+ 
+  .splitaccordiontext {
+     padding-top: 8px;
+ }
+ 
+    .splitaccordiontext {
+     display: none; 
+   }
+ 
+  .mobilesearchaccordian {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding-right: 3px;
+    cursor: pointer;
+   }
+ 
+  .xmobileheaderlogout {
+     position: absolute;
+     bottom: 20px;
+   }
+ 
+  .xmobileheaderlogout a {
+     color: #111;
+     font-family: 'DM Sans';
+     font-size: 16px;
+     font-weight: 500;
+     text-transform: uppercase;
+     text-decoration: none;
+     display: flex;
+     align-items: center;
+     gap: 12px;
+     border: 1px solid #354052;
+     justify-content: center;
+     padding: 10px 58px;
+   }
+  
+  .xmobileheaderimg a {
+     color: #1C1C1C;
+     text-align: center;
+     font-family: "Canela Trial";
+     font-size: 38px;
+     font-weight: 300;
+     text-decoration: none;
+     padding-left: 95px;
+   }
+ 
+  .headerline {
+   height: 1px;
+   background-color: rgba(28, 28, 28, 0.10);
+   margin: 56px 0;
+   margin-top: 28px;
+  }
+ 
+  .xheadermenuclose{
+   cursor: pointer;
+  }
+ 
+  .xmobileheaderoverflowmenu {
+   overflow: auto;
+   height: 80%;
+   scrollbar-width: none;      /* Firefox */
+   -ms-overflow-style: none;   /* IE and Edge */
+ }
+ 
+ .xmobileheaderoverflowmenu::-webkit-scrollbar {
+   display: none;              /* Chrome, Safari, Opera */
+ }
+ 
+  .xmobileheaderhidemenulistcontent h5{
+   color: #1C1C1C;
+   font-family: "Canela Trial";
+   font-size: 18px;
+   font-weight: 300;
+   letter-spacing: 1.44px;
+   margin-bottom: 6px;
+  }
+ 
+  .xmobileheaderhidemenulistcontent a{
+   color: #1C1C1C;
+   font-family: "Neue Haas Grotesk Display Pro";
+   font-size: 18px;
+   font-weight: 400;
+   letter-spacing: 1.44px;
+   text-decoration: none;
+  }
+ 
+  .xmobileheaderhidemenulistcontent{
+   margin-bottom: 30px;
+  }
