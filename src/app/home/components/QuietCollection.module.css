@@ -1,0 +1,489 @@
+/* Basic react-multi-carousel styles to replace the problematic import */
+.carousel_wrapper :global(.react-multi-carousel-list) {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carousel_wrapper :global(.react-multi-carousel-track) {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    will-change: transform, transition;
+  }
+  
+  .carousel_wrapper :global(.react-multi-carousel-item) {
+    position: relative;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+  
+  .carousel_wrapper :global(.react-multi-carousel-dot-list) {
+    position: absolute;
+    bottom: -45px;
+    display: flex;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+  }
+  
+  .carousel_wrapper :global(.react-multi-carousel-dot) {
+    list-style: none;
+    cursor: pointer;
+  }
+  
+  .carousel_wrapper :global(.react-multi-carousel-dot button) {
+    display: block;
+    width: 5px;
+    height: 5px;
+    border: none;
+    outline: none;
+    background: rgba(0,0,0,.2);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 0;
+  }
+  
+  .carousel_wrapper :global(.react-multi-carousel-dot--active button) {
+    background: #080808;
+  }
+  
+  /* Component specific styles */
+  .quiet_collection_container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    /* min-height: 100vh; */
+    padding-top: 150px ;
+    box-sizing: border-box;
+  }
+  
+  .collection_header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 60px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .collection_title {
+    color: #1C1C1C;
+    font-family: "Canela Trial";
+    font-size: 62px;
+    font-weight: 300;
+    text-transform: capitalize;
+    margin: 0;
+  }
+  
+  .enter_ritual_section {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: flex-end;
+  }
+  
+  .enter_ritual_text {
+    color: #1C1C1C;
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-size: 18px;
+    font-weight: 450;
+    letter-spacing: 1.44px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: normal;
+    margin: 0;
+    text-decoration: none;
+    margin-bottom: 12px;
+    padding-right: 138px;
+  }
+  
+  .enter_ritual_text:hover {
+    opacity: 0.8;
+  }
+  
+  .carousel_navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    position: absolute;
+    top: -80px;
+    right: 60px;
+    z-index: 10;
+  }
+  
+  .nav_arrow {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+  }
+  
+  .nav_arrow:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  
+  .nav_arrow_left {
+    transform: rotate(180deg) scaleY(-1);
+  }
+  
+  .nav_arrow_left:hover {
+    transform: rotate(180deg) scaleY(-1) scale(1.1);
+  }
+  
+  .carousel_wrapper {
+    width: 100%;
+    position: relative;
+  }
+  
+  .carousel_container {
+    width: 100%;
+    /* padding: 0 60px; */
+  }
+  
+  .carousel_track {
+    display: flex;
+    align-items: stretch;
+  }
+  
+  .carousel_item {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .product_card {
+    width: 100%;
+    max-width: 640px;
+    height: 960px;
+    position: relative;
+    background: #ffffff;
+    border: 1px solid rgba(28, 28, 28, 0.14);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin: 0 auto;
+  }
+  
+  .product_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .product_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .product_card:hover .product_overlay {
+    opacity: 1;
+  }
+  
+  .favorite_button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+  
+  .favorite_button:hover {
+    transform: scale(1.2);
+  }
+  
+  .favorite_button.favorited svg path {
+    fill: #ff4757 !important;
+  }
+  
+  .product_content {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 52px;
+    z-index: 5;
+    transition: all 0.4s ease;
+
+  }
+
+  .product_card:hover .product_content{
+    bottom: 140px;
+    transition: all 0.4s ease;
+
+  }
+  
+  .product_info {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    width: 540px;
+    text-align: center;
+  }
+  
+  .product_details {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+  
+  .product_name {
+    color: #1C1C1C;
+    font-family: "Canela Trial";
+    font-size: 32px;
+    font-weight: 300;
+    text-transform: capitalize;
+    margin: 0;
+  }
+  
+  .product_description {
+    color: #1C1C1C;
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1.44px;
+    margin: 0;
+  }
+  
+  .wear_story_link {
+    display: flex;
+    flex-direction: column;
+    /* gap: 12px; */
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .wear_story_link:hover {
+    transform: translateY(-2px);
+  }
+  
+  .wear_story_text {
+    color: #1C1C1C;
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.44px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  
+  .wear_story_line {
+    width: 100%;
+    height: 1px;
+    background: #3A4F41;
+  }
+  
+  .price_section {
+    position: absolute;
+    bottom: 57px;
+    left: 60px;
+    right: 60px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    z-index: 6;
+  }
+  
+  .product_card:hover .price_section {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .price_item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .price_label {
+    color: #1C1C1C;
+    font-family: "Canela Trial";
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: capitalize;
+    margin: 0;
+  }
+  
+  .price_value {
+    color: #1C1C1C;
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-size: 24px;
+    font-weight: 450;
+    letter-spacing: 1.92px;
+    margin: 0;
+  }
+  
+  /* Hide default react-multi-carousel dots */
+  .dot_list {
+    display: none !important;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .quiet_collection_container {
+      gap: 20px;
+      padding: 20px 0;
+    }
+  
+    .collection_header {
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+      padding: 0 16px;
+    }
+  
+    .collection_title {
+      font-size: 42px;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .enter_ritual_section {
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 16px;
+    }
+  
+    .carousel_navigation {
+      position: static;
+      right: auto;
+    }
+  
+    .nav_arrow {
+      width: 24px;
+      height: 24px;
+    }
+  
+    .carousel_container {
+      padding: 0 16px;
+    }
+  
+    .product_card {
+      max-width: 215px;
+      width: 215px;
+      height: 460px;
+    }
+  
+    .product_content {
+      padding: 16px;
+      gap: 32px;
+    }
+  
+    .product_info {
+      width: 183px;
+      gap: 24px;
+    }
+  
+    .product_name {
+      font-size: 16px;
+      height: 16px;
+    }
+  
+    .product_description {
+      font-size: 12px;
+      letter-spacing: 0.96px;
+    }
+  
+    .wear_story_link {
+      width: 116px;
+      gap: 8px;
+    }
+  
+    .wear_story_text {
+      font-size: 12px;
+      letter-spacing: 0.96px;
+    }
+  
+    .price_section {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      right: auto;
+      flex-direction: row;
+      gap: 46px;
+      opacity: 1;
+      transform: none;
+      margin-top: 32px;
+    }
+  
+    .price_item {
+      gap: 12px;
+    }
+  
+    .price_label {
+      font-size: 12px;
+    }
+  
+    .price_value {
+      font-size: 14px;
+      letter-spacing: 1.12px;
+    }
+  
+    .favorite_button {
+      width: 18px;
+      height: 18px;
+      top: 18px;
+      right: 18px;
+    }
+  
+    .carousel_item {
+      padding-right: 16px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .carousel_item {
+      padding-right: 8px;
+    }
+    
+    .product_card {
+      width: calc(50vw - 24px);
+      min-width: 180px;
+    }
+  }

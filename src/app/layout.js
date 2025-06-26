@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HeaderFile from "./home/components/HeaderFile";
+import Footer from "./home/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,9 +22,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link href="https://fonts.cdnfonts.com/css/canela-text-trial" rel="stylesheet"/>
+        <link href="https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro" rel="stylesheet"/>
+        {/* <link href="https://fonts.cdnfonts.com/css/canela-trial" rel="stylesheet"/>
+        <link href="https://fonts.cdnfonts.com/css/canela-condensed-trial" rel="stylesheet"/>
+        <link href="https://fonts.cdnfonts.com/css/canela-deck-trial" rel="stylesheet"/> */}
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <HeaderFile />
         {children}
+        <Footer />
       </body>
     </html>
   );
