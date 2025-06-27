@@ -63,7 +63,7 @@ padding: 240px 0;
     line-height: 150%; 
     text-transform: capitalize;
     transition: all 0.3s ease-in-out;
-    z-index: 10;
+    z-index: 1;
   }
   
   .women_label {

@@ -1,0 +1,350 @@
+.container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .backgroundImage {
+    background-size: cover, cover, 103.62% 100%, 109.33% 100%, auto, cover, 100% 143.64%, auto;
+    flex-basis: 0;
+    background-color: #d9d9d9;
+    background-position: 50% 50%, 50% 50%, 21.21% 0%, 27.67% 0%, 0% 0%, 50% 50%, 0% 12.51%, 0% 0%;
+    flex-grow: 1;
+    height: 1020px;
+    min-height: 1px;
+    min-width: 1px;
+    flex-shrink: 0;
+    animation: backgroundFadeIn 1.2s ease-out;
+    transition: transform 0.8s ease;
+  }
+  
+  .backgroundImage:hover {
+    transform: scale(1.02);
+  }
+  
+  .productCardsContainer {
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    left: 1148px;
+    padding: 0;
+    top: 714px;
+    animation: slideInRight 0.8s ease-out 0.5s both;
+  }
+  
+  .productCard {
+    background-color: white;
+    position: relative;
+    flex-shrink: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    animation: fadeInUp 0.6s ease-out both;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .productCard:hover {
+    /* transform: translateY(-5px); */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .productCard:nth-child(1) {
+    animation-delay: 0.3s;
+  }
+  
+  .productCard:nth-child(2) {
+    animation-delay: 0.6s;
+  }
+  
+  .productCardCenter {
+    transform: translateX(0) scale(1);
+    z-index: 3;
+    opacity: 1;
+  }
+  
+  .productCardRight {
+    transform: translateX(200px) scale(0.8);
+    z-index: 2;
+    opacity: 0.7;
+  }
+  
+  .productCardLeft {
+    transform: translateX(-200px) scale(0.8);
+    z-index: 1;
+    opacity: 0.7;
+  }
+  
+  .productCardActive {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .cardContent {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .cardContent:hover {
+    transform: scale(1.02);
+  }
+  
+  .productImage {
+    background-size: 69.97% 69.73%, auto;
+    background-color: white;
+    height: 226px;
+    flex-shrink: 0;
+    width: 203px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.4s ease;
+  }
+  
+  .productImage:hover {
+    transform: scale(1.05);
+  }
+  
+  .productInfo {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+    flex-shrink: 0;
+  }
+  
+  .productTextContainer {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    font-style: normal;
+    padding: 0;
+    position: relative;
+    flex-shrink: 0;
+    color: #1c1c1c;
+    text-align: left;
+    width: 100%;
+    animation: fadeIn 0.8s ease-out both;
+  }
+  
+  .productTitle {
+    color: #1C1C1C;
+    font-family: "Canela Trial";
+    font-size: 32px;
+    font-weight: 300;
+    text-transform: capitalize;
+    min-width: 100%;
+    position: relative;
+    flex-shrink: 0;
+    width: min-content;
+    line-height: normal;
+  }
+  
+  .productDescription {
+    color: #1C1C1C;
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.44px;
+    position: relative;
+    flex-shrink: 0;
+    width: 283px;
+  }
+  
+  .actionContainer {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0;
+    position: relative;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+  
+  .actionContainer:hover {
+    transform: scale(1.05);
+  }
+  
+  .actionText {
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-size: 18px;
+    font-weight: 450;
+    line-height: normal;
+    letter-spacing: 1.44px;
+    text-transform: uppercase;
+    position: relative;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .actionText:hover {
+    color: #666;
+  }
+  
+  .heartIcon {
+    position: absolute;
+    left: 512px;
+    top: 30px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .heartIcon:hover {
+    transform: scale(1.1);
+  }
+  
+  .heartIcon:active {
+    transform: scale(0.95);
+  }
+  
+  .heartSvg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    cursor: pointer;
+  }
+  
+  .heartPath {
+    fill: #1C1C1C;
+    transition: fill 0.3s ease;
+    animation: drawPath 1s ease-in-out;
+  }
+  
+  .heartIcon:hover .heartPath {
+    fill: #ff6b6b;
+  }
+  
+  .categoryText {
+    position: absolute;
+    color: #111;
+    font-family: "Canela Trial";
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 150%; 
+    text-transform: capitalize;
+    left: 60px;
+    top: 937px;
+    cursor: pointer;
+    animation: slideInUp 0.6s ease-out 0.8s both;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .categoryText:hover {
+    transform: scale(1.05);
+    color: #666;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes backgroundFadeIn {
+    from {
+      opacity: 0;
+      transform: scale(1.1);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes drawPath {
+    from {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+    }
+    to {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  /* Utility class for letter spacing adjustment */
+  .adjustLetterSpacing {
+    letter-spacing: 1.44px;
+  }

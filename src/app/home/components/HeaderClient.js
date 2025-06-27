@@ -10,6 +10,8 @@ const HeaderClient = ({ children }) => {
   const [isSearchOverlayOpen, setIsSearchOverlayOpen] = useState(false);
   // State to track which accordion is open
   const [openAccordion, setOpenAccordion] = useState(null);
+  // State to track scroll position
+  const [isScrolled, setIsScrolled] = useState(false);
 
   // Refs for direct DOM manipulation where necessary
   const mobileMenuRef = useRef(null);
@@ -24,6 +26,23 @@ const HeaderClient = ({ children }) => {
       document.body.style.overflow = 'unset';
     }
   }, [isMobileMenuOpen]);
+
+  // Effect for handling scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      setIsScrolled(scrollTop > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial check
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   // Handlers for mobile menu
   const handleOpenMenu = () => {
@@ -93,7 +112,9 @@ const HeaderClient = ({ children }) => {
 
   return (
     <>
-      {children}
+      <div className={`header-wrapper ${isScrolled ? 'header-scrolled' : ''}`}>
+        {children}
+      </div>
       
       <MobileMenu 
         isMobileMenuOpen={isMobileMenuOpen}

@@ -4,6 +4,7 @@ import TextContent from "./TextContent";
 import FashionCategories from "./FashionCategories";
 import QuietCollection from './QuietCollection';
 import MembershipSection from './MembershipSection';
+import LuxuryShowcase from './LuxuryShowcase';
 
 const LandingHome = () => {
   return (
@@ -12,6 +13,7 @@ const LandingHome = () => {
           <TextContent />
           <FashionCategories />
           <QuietCollection/>
+          <LuxuryShowcase/>
           <FashionCategories/>
           <MembershipSection/>
     </div>

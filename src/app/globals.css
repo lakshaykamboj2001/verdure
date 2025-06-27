@@ -4501,3 +4501,17 @@ margin-right: 0;
 .checkout-container .col-lg-5{
   padding-left: 0;
 }
+
+/* Header wrapper for scroll functionality */
+.header-wrapper {
+  transition: background-color 0.3s ease;
+}
+
+.header-wrapper.header-scrolled .x_mobile_header {
+  background-color: #FFF;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header-wrapper.header-scrolled .x_mobile_header_menu {
+  padding: 10px 48px;
+}
