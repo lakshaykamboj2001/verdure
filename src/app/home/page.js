@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './components/Header'
 import Banner from './components/Banner'
 import HeaderFile from './components/HeaderFile'
+import DiorScrollEffect from './components/VideoSection'
 
 const page = () => {
   return (
@@ -9,6 +10,8 @@ const page = () => {
         {/* <Header /> */}
         {/* <HeaderFile /> */}
         {/* <Banner /> */}
+        <DiorScrollEffect/> 
+
     </div>
   )
 }

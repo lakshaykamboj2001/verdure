@@ -30,24 +30,30 @@
   }
   
   .productCardsContainer {
+    right: 0;
     position: absolute;
     box-sizing: border-box;
-    display: flex;
+    display: flex
+;
     flex-direction: row;
     gap: 20px;
     align-items: center;
     justify-content: flex-start;
-    left: 1148px;
+    /* left: 1148px; */
     padding: 0;
     top: 714px;
-    animation: slideInRight 0.8s ease-out 0.5s both;
+    animation: LuxuryShowcase_slideInRight__vKz5L 0.8s ease-out 0.5s both;
+    width: 100%;
+    max-width: 680px;
+    overflow: hidden;
+    overflow-x: scroll;
   }
   
   .productCard {
     background-color: white;
     position: relative;
     flex-shrink: 0;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     overflow: hidden;
     animation: fadeInUp 0.6s ease-out both;
@@ -347,4 +353,87 @@
   /* Utility class for letter spacing adjustment */
   .adjustLetterSpacing {
     letter-spacing: 1.44px;
+  }
+
+
+
+
+  @media (max-width: 992px) {
+    .productTitle {
+        font-size: 24px;
+        margin: 0px;
+      }
+      .productTextContainer {
+        gap: 4px;
+      }
+      .productInfo {
+        gap: 24px;
+      }
+      .productDescription {
+        font-size: 14px;
+      }
+      .actionText {
+        font-size: 14px;
+      }
+        
+  .productImage {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+  }
+  .cardContent {
+    gap: 10px;
+    padding: 10px;
+  }
+  .productCardsContainer {
+    top: 774px;
+    max-width: 580px;
+
+}
+  }
+
+
+  @media (max-width: 767px) {
+    ._backgroundImage {
+        height: 900px;
+    }
+    .categoryText {
+        top: 472px;
+        left: 15px;
+    }
+    .cardContent {
+        flex-direction: column;
+    }
+    .productCardsContainer {
+        top: 650px;
+        right: -16px;
+
+    }
+    .productCard{
+        border-radius: 0px;
+    }
+    .productTextContainer {
+        text-align: center;
+    }
+    .productTitle {
+        font-size: 16px;
+    }
+    .productDescription {
+        font-size: 12px;
+    }
+    .actionText {
+        font-size: 12px;
+        width: 100%;
+        text-align: center;
+    }
+    .actionContainer {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .productInfo {
+        gap: 0;
+    }
+  
+    
   }

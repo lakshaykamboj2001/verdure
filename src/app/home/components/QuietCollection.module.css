@@ -259,7 +259,7 @@
     flex-direction: column;
     gap: 32px;
     align-items: center;
-    width: 540px;
+    max-width: 540px;
     text-align: center;
   }
   
@@ -364,8 +364,42 @@
     display: none !important;
   }
   
+  @media (max-width: 1300px) {
+    .product_card{
+        height: 800px;
+    }
+
+  }
+
+  @media (max-width: 1024px) {
+
+  .collection_header {
+    padding: 0 20px;
+}
+.collection_title {
+    font-size: 48px;
+}
+.quiet_collection_container {
+    padding-top: 100px;
+}
+  }
+
+  @media (max-width: 992px) {
+  .collection_title {
+    font-size: 36px;
+}
+.enter_ritual_text {
+    font-size: 16px;
+}
+.carousel_navigation {
+    top: -78px;
+}
+.quiet_collection_container {
+    padding-top: 60px;
+}
+  }
   /* Mobile Responsive */
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .quiet_collection_container {
       gap: 20px;
       padding: 20px 0;
@@ -475,9 +509,9 @@
     .carousel_item {
       padding-right: 16px;
     }
-  }
+  } */
   
-  @media (max-width: 600px) {
+  /* @media (max-width: 600px) {
     .carousel_item {
       padding-right: 8px;
     }
@@ -486,4 +520,83 @@
       width: calc(50vw - 24px);
       min-width: 180px;
     }
+  } */
+  .mobile_enter_ritual_text {
+    display: none;
   }
+@media (max-width: 767px) {
+  .product_content {
+    padding: 12px;
+}
+.product_name {
+    font-size: 16px;
+}
+.product_description {
+    font-size: 12px;
+}
+.wear_story_text {
+    font-size: 12px;
+}
+.product_card {
+    height: 460px;
+}
+.product_info {
+    gap: 24px;
+}
+.product_details {
+    gap: 24px;
+}
+.price_label {
+    font-size: 12px;
+}
+.price_value {
+    font-size: 12px;
+}
+.price_section {
+    bottom: 30px;
+    width: 163px;
+    left: 16px;
+}
+.product_card:hover .product_content {
+    bottom: 90px;
+    transition: all 0.4s ease;
+}
+.product_content {
+    bottom: 50px;
+   
+}
+.favorite_button {
+    top: 18px;
+    right: 18px;
+    width: 18px !important;
+    height: 18px !important;
+}
+.mobile_enter_ritual_textPadding {
+    padding-bottom:100px;
+}
+.carousel_navigation {
+    top: 0;
+    bottom: -538px;
+    right: 0;
+}
+.nav_arrow svg{
+    width: 24px;
+    height: 24px;
+}
+.enter_ritual_text {
+    display: none;
+}
+.mobile_enter_ritual_text {
+    display: block;
+    margin: 0;
+    padding-top: 31px;
+    padding-left: 16px;
+}
+.quiet_collection_container {
+    padding-top: 100px;
+}
+.collection_header {
+    padding: 0 16px;
+}
+
+}

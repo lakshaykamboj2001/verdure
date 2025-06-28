@@ -330,18 +330,42 @@
   }
   
   /* Responsive breakpoint adjustments */
-  @media (max-width: 480px) {
+  @media (max-width: 1325px) {
+  .navigation {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0px;
+}
+@media (max-width: 992px) {
+  
+    .navigation{
+        padding: 0 20px;
+    }
+}
+  }
+  @media (max-width: 767px) {
     .footer {
       padding: 32px 12px;
     }
     
     .navLinkMobile {
-      font-size: 14px;
+      font-size: 15px;
       letter-spacing: 1px;
     }
     
     .copyrightMobile {
-      font-size: 12px;
+      font-size: 14px;
       letter-spacing: 1px;
+      text-align: center;
+    }
+    .LogosvgSize svg{
+width: 43px;
+height: 34px;
+    }
+    .footerContainer{
+        gap: 40px;
+    }
+    .mobileSocialSection {
+        margin: 28px 0 ;
     }
   }

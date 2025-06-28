@@ -61,7 +61,7 @@ export default function QuietCollection() {
       breakpoint: { max: 768, min: 0 },
       items: 2,
       slidesToSlide: 1,
-      partialVisibilityGutter: 16
+      partialVisibilityGutter: 0
     }
   };
 
@@ -194,6 +194,8 @@ export default function QuietCollection() {
   );
 
   return (
+    <>
+    <div className={`${styles.mobile_enter_ritual_textPadding}`}>
     <div className={`${styles.quiet_collection_container}`}>
       <div className={`${styles.collection_header}`}>
         <h1 className={`${styles.collection_title}`}>
@@ -242,6 +244,15 @@ export default function QuietCollection() {
           ))}
         </Carousel>
       </div>
+
+  
     </div>
+        <div className={`${styles.enter_ritual_section}`}>
+        <Link href="/ritual" className={`${styles.enter_ritual_text} ${styles.mobile_enter_ritual_text}`}>
+          Enter the ritual
+        </Link>
+      </div>
+      </div>
+      </>
   );
 }

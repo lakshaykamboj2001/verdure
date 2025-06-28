@@ -16,7 +16,7 @@ function VALogo({ isMobile = false }) {
       tabIndex={0}
       aria-label="Verdure Atelier - Back to top"
     >
-      <div style={{ width: `${size.width}px`, height: `${size.height}px` }}>
+      <div className={styles.LogosvgSize} style={{ width: `${size.width}px`, height: `${size.height}px` }}>
       <svg xmlns="http://www.w3.org/2000/svg" width="58" height="45" viewBox="0 0 58 45" fill="none">
   <path d="M19.336 44.9997H17.9165L4.73164 8.74356C3.13471 4.36679 2.07009 2.53328 0 0.758918V0.640625H10.3505V0.758918C9.28584 2.17841 8.57609 5.37226 9.87729 8.92099L20.4643 37.9023L30.2233 11.4051C32.4117 5.5497 30.8148 2.41499 29.5727 0.758918V0.640625H37.4391V0.758918C34.7184 3.24303 33.7721 5.37226 32.116 9.98561L19.336 44.9997Z" fill="white"/>
   <path d="M53.2422 36.8018C55.0639 41.6595 55.8534 43.0562 57.918 44.8779V45H48.2627L49.4834 44.6904C50.4765 44.5249 50.4767 44.3589 48.0195 36.5586L45.4219 29.4414H45.4355L44.5293 27.0244H44.5576L37.1963 6.6875L39.6191 0H39.6387L53.2422 36.8018Z" fill="white"/>

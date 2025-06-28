@@ -25,9 +25,7 @@ export default function RootLayout({ children }) {
       <head>
         <link href="https://fonts.cdnfonts.com/css/canela-text-trial" rel="stylesheet"/>
         <link href="https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro" rel="stylesheet"/>
-        {/* <link href="https://fonts.cdnfonts.com/css/canela-trial" rel="stylesheet"/>
-        <link href="https://fonts.cdnfonts.com/css/canela-condensed-trial" rel="stylesheet"/>
-        <link href="https://fonts.cdnfonts.com/css/canela-deck-trial" rel="stylesheet"/> */}
+     
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <HeaderFile />

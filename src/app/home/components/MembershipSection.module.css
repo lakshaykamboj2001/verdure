@@ -237,10 +237,33 @@ align-items: center;
 justify-content: center;
   }
 
+  @media (max-width: 1200px) {
+  .membershipContainer {
+    gap: 40px;
+}
+  }
 
-  
+  @media (max-width: 992px) {
+    .membershipContainer{
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+    .contentSection{
+        width: 100%;
+        gap: 40px;
+    }
+    .contentSectionBox{
+        max-width: 100%;
+    }
+    .titleLine {
+        font-size: 48px;
+
+    }
+ 
+}
   /* Responsive adjustments */
   @media (max-width: 768px) {
+  
     .membershipContainer {
       padding: 1rem;
     }
@@ -254,9 +277,9 @@ justify-content: center;
       text-align: center;
     }
     
-    .contentText {
+    /* .contentText {
       text-align: center;
-    }
+    } */
   }
   
   /* Custom animations */
@@ -317,3 +340,41 @@ justify-content: center;
   .joinButton:focus:not(:focus-visible) {
     outline: none;
   }
+
+@media (max-width: 767px) {
+  .interactiveElement {
+    height: 600px;
+    border-radius: 0 ;
+    margin: 0;
+}
+.membershipContainer {
+    padding: 120px 16px !important;
+    padding-bottom: 90px !important;
+    margin-bottom: 0px !important;
+}
+.contentSection {
+    padding: 0 !important;
+}
+.contentText {
+    font-size: 14px !important;
+}
+.titleLine {
+    font-size: 32px !important;
+}
+.membershipLabel p{
+    font-size: 12px ;
+}
+.joinButton {
+    font-size: 16px;
+    height: 51px;
+    max-width: 225px ;
+}
+.titleContainer {
+    gap: 4px !important;
+}
+.contentSectionBox {
+    gap: 42px !important;
+}
+
+
+}

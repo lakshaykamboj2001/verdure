@@ -40,7 +40,7 @@ function JoinButton() {
 
 function ContentSection() {
   return (
-    <div className="box-border content-stretch flex flex-col gap-[42px] md:gap-[62px] items-start justify-start p-0 relative shrink-0 w-full max-w-[450px]">
+    <div className={`${styles.contentSectionBox} box-border content-stretch flex flex-col gap-[42px] md:gap-[62px] items-start justify-start p-0 relative shrink-0 w-full max-w-[450px]`}>
       <MembershipTitle />
       <div className={`${styles.contentText} font-['Neue_Haas_Grotesk_Display_Pro:45_Light',_sans-serif] leading-[1.5] min-w-full not-italic relative shrink-0 text-[#1c1c1c] text-[14px] md:text-[18px] text-left tracking-[1.12px] md:tracking-[1.44px]`}>
         <p className={`${styles.contentParagraph} block mb-0`}>
@@ -81,7 +81,7 @@ export default function MembershipSection() {
       </div>
       
       {/* Mobile: Content second, Desktop: Content on right */}
-      <div className="order-2 md:order-2 flex justify-center md:justify-start w-full md:w-auto px-4 md:px-0">
+      <div className={`${styles.contentSection} order-2 md:order-2 flex justify-center md:justify-start w-full md:w-auto px-4 md:px-0`}>
         <ContentSection />
       </div>
     </div>

@@ -16,6 +16,7 @@ const LandingHome = () => {
           <LuxuryShowcase/>
           <FashionCategories/>
           <MembershipSection/>
+          
     </div>
   )
 }

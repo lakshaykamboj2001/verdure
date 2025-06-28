@@ -3037,6 +3037,7 @@ margin-right: 0;
 
 
 @media (max-width: 767px) {
+  
  
   .Va_banner_img {
     height: calc(100vh - 76px);
@@ -4418,6 +4419,9 @@ height: 40px;
 }
 
 @media (max-width: 992px) {
+  .banner_section_content h2, .banner_section_content h2 span {
+    font-size: 80px;
+}
 .page-title {
   font-size: 48px;
 }
@@ -4447,7 +4451,7 @@ height: 40px;
 
 @media (max-width: 767px) {
 
-
+ 
 .page-title {
   font-size: 36px;
 }
@@ -4491,7 +4495,17 @@ margin-right: 0;
 .x_mobile_header_menu_left .x_header_search{
   display: block;
  }
+ .header-wrapper.header-scrolled .x_mobile_header_menu {
+  padding: 10px 0 !important;
 }
+.banner_section_content h2, .banner_section_content h2 span {
+  font-size: 60px;
+}
+
+}
+
+
+
 
 .checkout-container .col-lg-7{
   padding-right: 0;
