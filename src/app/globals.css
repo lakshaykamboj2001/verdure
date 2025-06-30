@@ -312,6 +312,10 @@ font-family: "Neue Haas Grotesk Display Pro"; */
    display: inline-block;
  }
 
+ .Product_Page_banner_img{
+  height: 100vh;
+ }
+
  .va_banner_img_landing{
   height: 100vh ;
  }
@@ -360,13 +364,14 @@ font-family: "Neue Haas Grotesk Display Pro"; */
 
  .banner_section_content {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* top: 0; */
+  bottom: 52px;
+  left: 40px;
+  /* transform: translate(-50%, 0); */
   z-index: 1;
   margin-bottom: 0px;
-  text-align: center;
-  width: 100%;
+  /* text-align: center; */
+  width: max-content;
 }
 
  .banner_section_content_homepage{
@@ -375,9 +380,8 @@ font-family: "Neue Haas Grotesk Display Pro"; */
 
  .banner_section_content h2 , .banner_section_content h2 span {
   color: #FFF;
-text-align: center;
 font-family: "Canela Trial";
-font-size: 202px;
+font-size: 62px;
 font-weight: 300;
 text-transform: capitalize;
  }
@@ -1055,6 +1059,8 @@ margin: 0;
   align-items: center;
   justify-content: flex-end;
   gap: 12px;
+  width: max-content;
+  margin-left: auto;
 }
 
 .ProductPageBreadcrumb_padding{
@@ -1169,7 +1175,14 @@ margin: 0;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 1500;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.ProductPageFilterOverlay.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 .ProductPageFilter {
@@ -2684,9 +2697,9 @@ margin-right: 0;
   }
 
   @media (max-width: 1300px) {
-    .banner_section_content h2 , .banner_section_content h2 span {
+    /* .banner_section_content h2 , .banner_section_content h2 span {
       font-size: 150px;
-    }
+    } */
   }
 
 @media (max-width: 1242px) {
@@ -2804,9 +2817,9 @@ margin-right: 0;
 }
 
 @media (max-width: 1070px) {
-  .banner_section_content h2 , .banner_section_content h2 span{
+  /* .banner_section_content h2 , .banner_section_content h2 span{
     font-size: 120px;
-  }
+  } */
   /* .banner_section_content h2 {
     font-size: 42px;
 } */
@@ -3297,10 +3310,11 @@ padding-bottom: 40px;
 .Product_Page_filter_section_two{
   grid-template-columns: 2fr 2fr;
 }
-.ProductPageFilterToggle ,.breadcrumb-item p, .ProductPageFilterToggle p{
+.ProductPageFilterToggle ,.breadcrumb_item p, .ProductPageFilterToggle p{
   justify-content: flex-start;
+  margin-left: unset;
 }
-.breadcrumb-item-count {
+.breadcrumb_item_count {
   font-size: 16px;
 }
 .ProductPageFilterToggle  svg{
@@ -3316,6 +3330,8 @@ padding-bottom: 40px;
 }
 .Product_Page_banner_section_content{
   margin-bottom: 0;
+  left: 15px;
+  bottom: 28px;
 }
 .ProductPageFilter {
   width: 330px;
@@ -4419,9 +4435,9 @@ height: 40px;
 }
 
 @media (max-width: 992px) {
-  .banner_section_content h2, .banner_section_content h2 span {
+  /* .banner_section_content h2, .banner_section_content h2 span {
     font-size: 80px;
-}
+} */
 .page-title {
   font-size: 48px;
 }
@@ -4499,7 +4515,7 @@ margin-right: 0;
   padding: 10px 0 !important;
 }
 .banner_section_content h2, .banner_section_content h2 span {
-  font-size: 60px;
+  font-size: 42px;
 }
 
 }
@@ -4529,3 +4545,12 @@ margin-right: 0;
 .header-wrapper.header-scrolled .x_mobile_header_menu {
   padding: 10px 48px;
 }
+
+
+
+
+
+
+
+
+
