@@ -1,24 +1,22 @@
 "use client";
 import React, { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import SearchOverlay from './SearchOverlay';
 import MobileMenu from './MobileMenu';
 
 const HeaderClient = ({ children }) => {
-  // State to manage mobile menu visibility
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  // State to manage search overlay visibility
   const [isSearchOverlayOpen, setIsSearchOverlayOpen] = useState(false);
-  // State to track which accordion is open
   const [openAccordion, setOpenAccordion] = useState(null);
-  // State to track scroll position
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Refs for direct DOM manipulation where necessary
   const mobileMenuRef = useRef(null);
   const overlayRef = useRef(null);
   const searchOverlayRef = useRef(null);
 
-  // Effect for handling body overflow when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -27,7 +25,6 @@ const HeaderClient = ({ children }) => {
     }
   }, [isMobileMenuOpen]);
 
-  // Effect for handling scroll
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -35,87 +32,51 @@ const HeaderClient = ({ children }) => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    
-    // Initial check
     handleScroll();
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Handlers for mobile menu
-  const handleOpenMenu = () => {
-    setIsMobileMenuOpen(true);
+  const handleOpenMenu = () => setIsMobileMenuOpen(true);
+  const handleCloseMenu = () => setIsMobileMenuOpen(false);
+  const handleOverlayClick = () => setIsMobileMenuOpen(false);
+
+  const handleAccordionClick = (name) => {
+    setOpenAccordion(prev => (prev === name ? null : name));
   };
 
-  const handleCloseMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
-
-  const handleOverlayClick = () => {
-    setIsMobileMenuOpen(false);
-  };
-
-  // Handler for mobile accordion
-  const handleAccordionClick = (accordionName) => {
-    setOpenAccordion(prev => (prev === accordionName ? null : accordionName));
-  };
-
-  // Handlers for search overlay
   const handleOpenSearch = () => {
     setIsSearchOverlayOpen(true);
-    // Focus the input when the search overlay opens
     setTimeout(() => {
-      if (searchOverlayRef.current) {
-        const input = searchOverlayRef.current.querySelector('.search_overlay_input');
-        if (input) {
-          input.focus();
-        }
-      }
+      const input = searchOverlayRef.current?.querySelector('.search_overlay_input');
+      input?.focus();
     }, 0);
   };
 
-  const handleCloseSearch = () => {
-    setIsSearchOverlayOpen(false);
-  };
+  const handleCloseSearch = () => setIsSearchOverlayOpen(false);
+  const handlePanelClick = (e) => e.stopPropagation();
 
-  // Prevent clicks inside the search overlay panel from closing it
-  const handlePanelClick = (e) => {
-    e.stopPropagation();
-  };
-
-  // Add event listeners to DOM elements
   useEffect(() => {
-    // Add click handlers to search icons
     const searchIcons = document.querySelectorAll('.x_header_search.xhs_search');
-    searchIcons.forEach(icon => {
-      icon.addEventListener('click', handleOpenSearch);
-    });
-
-    // Add click handler to menu open button
     const menuOpenBtn = document.querySelector('.x_header_menu_open');
-    if (menuOpenBtn) {
-      menuOpenBtn.addEventListener('click', handleOpenMenu);
-    }
 
-    // Cleanup event listeners
+    searchIcons.forEach(icon => icon.addEventListener('click', handleOpenSearch));
+    menuOpenBtn?.addEventListener('click', handleOpenMenu);
+
     return () => {
-      searchIcons.forEach(icon => {
-        icon.removeEventListener('click', handleOpenSearch);
-      });
-      if (menuOpenBtn) {
-        menuOpenBtn.removeEventListener('click', handleOpenMenu);
-      }
+      searchIcons.forEach(icon => icon.removeEventListener('click', handleOpenSearch));
+      menuOpenBtn?.removeEventListener('click', handleOpenMenu);
     };
   }, []);
 
   return (
     <>
       <div className={`header-wrapper ${isScrolled ? 'header-scrolled' : ''}`}>
-        {children}
+        <div className={`x_mobile_header${!isHome ? " Product_Page_x_mobile_header" : ""}`}>
+          {children}
+        </div>
       </div>
-      
+
       <MobileMenu 
         isMobileMenuOpen={isMobileMenuOpen}
         mobileMenuRef={mobileMenuRef}
@@ -136,4 +97,4 @@ const HeaderClient = ({ children }) => {
   );
 };
 
-export default HeaderClient; 
+export default HeaderClient;

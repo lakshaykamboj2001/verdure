@@ -41,13 +41,13 @@ const SearchOverlay = ({
           </div>
           <div className="search_overlay_collections">
             <div className="search_overlay_collections_row">
-              <div className="search_overlay_collection" style={{ backgroundImage: "url('./images/collection1.png')" }}>
+              <div className="search_overlay_collection" style={{ backgroundImage: "url('/images/collection1.png')" }}>
                 <div className="search_overlay_collection_content">
                   <div className="search_overlay_collection_title">Seasonless Silhouettes</div>
                   <div className="search_overlay_collection_link">SHOP THE COLLECTION</div>
                 </div>
               </div>
-              <div className="search_overlay_collection" style={{ backgroundImage: "url('./images/collection2.png')" }}>
+              <div className="search_overlay_collection" style={{ backgroundImage: "url('/images/collection2.png')" }}>
                 <div className="search_overlay_collection_content">
                   <div className="search_overlay_collection_title">Circular Essentials</div>
                   <div className="search_overlay_collection_link">SHOP THE COLLECTION</div>
@@ -55,13 +55,13 @@ const SearchOverlay = ({
               </div>
             </div>
             <div className="search_overlay_collections_row">
-              <div className="search_overlay_collection" style={{ backgroundImage: "url('./images/collection3.png')" }}>
+              <div className="search_overlay_collection" style={{ backgroundImage: "url('/images/collection3.png')" }}>
                 <div className="search_overlay_collection_content">
                   <div className="search_overlay_collection_title">The Reborn Collection</div>
                   <div className="search_overlay_collection_link">SHOP THE COLLECTION</div>
                 </div>
               </div>
-              <div className="search_overlay_collection" style={{ backgroundImage: "url('./images/collection4.png')" }}>
+              <div className="search_overlay_collection" style={{ backgroundImage: "url('/images/collection4.png')" }}>
                 <div className="search_overlay_collection_content">
                   <div className="search_overlay_collection_title">Bags</div>
                   <div className="search_overlay_collection_link">SHOP THE COLLECTION</div>

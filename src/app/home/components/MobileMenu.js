@@ -24,14 +24,14 @@ const MobileMenu = ({
                             <div className="x_mobile_header_hide_menu">
                                 <div className="x_mobile_header_logo">
                                     <div className="x_header_menu_close" onClick={handleCloseMenu}>
-                                        <img src="./images/menu-close.svg" alt="Close Menu" />
+                                        <img src="/images/menu-close.svg" alt="Close Menu" />
                                     </div>
                                 </div>
                             </div>
 
                             <div className="x_header_logo">
                                 <p>Verdure Atelier</p>
-                                <img src="./images/side-logo.svg" alt="logo" />
+                                <img src="/images/side-logo.svg" alt="logo" />
                             </div>
 
                             <div className="x_mobile_header_overflow_menu">

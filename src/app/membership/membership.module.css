@@ -1,0 +1,272 @@
+
+
+.journey_path_container h2{
+    color: #1C1C1C;
+    text-align: center;
+    font-family: "Canela Trial";
+    font-size: 60px;
+    font-weight: 300;
+    text-transform: capitalize;
+    margin-bottom: 65px;
+}
+
+.journey_path_content_right h3{
+    color: #000;
+font-family: "Canela Trial";
+font-size: 32px;
+font-weight: 300;
+text-transform: capitalize;
+}
+
+.journey_path_content_right p{
+  
+    color: #000;
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1.44px;
+    text-transform: capitalize;
+    margin: 0;
+    margin-bottom: 38px;
+}
+
+.journey_path_content_right button{
+    position: relative;
+    overflow: hidden;
+    background: #2d3d32;
+    color: #F4F1EC;
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1.44px;
+    text-transform: uppercase;
+    height: 53px;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* max-width: 303px; */
+    border: none;
+    margin: 0 auto;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.journey_path_container{
+    padding: 160px 60px;
+    padding-bottom: 80px;
+}
+
+.journey_path_content{
+    position: relative;
+}
+
+.journey_path_content_right{
+    position: absolute;
+    max-width: 539px;
+    top: 50%;
+    left: 110px;
+    transform: translateY(-50%);
+}
+
+.ready_apply_content{
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.ready_apply_content h2{
+color: #1C1C1C;
+text-align: center;
+
+font-family: "Canela Trial";
+font-size: 60px;
+font-weight: 300;
+
+text-transform: capitalize;
+}
+
+.ready_apply_content p{
+    color: #1C1C1C;
+text-align: center;
+
+font-family: "Neue Haas Grotesk Display Pro";
+font-size: 18px;
+font-weight: 400;
+
+letter-spacing: 1.44px;
+}
+.ready_apply_content_button button{ 
+max-width: max-content;
+padding: 0 40px;
+}
+.ready_apply_container{
+    padding: 60px;
+}
+
+
+.discover_membership_container{
+    padding: 60px;
+}
+
+.discover_membership_content{
+    background-color: #F4F1EC;
+}
+
+.discover_membership_content h3{
+    color: #1C1C1C;
+font-family: "Canela Trial";
+font-size: 32px;
+font-weight: 300;
+text-transform: capitalize;
+margin-bottom: 18px;
+}
+
+.discover_membership_content h4{
+    color: #1C1C1C;
+font-family: "Neue Haas Grotesk Display Pro";
+font-size: 18px;
+font-weight: 450;
+letter-spacing: 1.44px;
+text-transform: uppercase;
+margin-bottom: 10px;
+}
+
+.discover_membership_content p{
+    color: #1C1C1C;
+font-family: "Neue Haas Grotesk Display Pro";
+font-size: 18px;
+font-weight: 400;
+letter-spacing: 1.44px;
+}
+
+.discover_membership_content a{
+    color: #1C1C1C;
+font-family: "Neue Haas Grotesk Display Pro";
+font-size: 16px;
+font-weight: 450;
+letter-spacing: 0.96px;
+text-transform: uppercase;
+border-bottom: 1px solid #3A4F41;
+padding-bottom: 8px;
+text-decoration: none;
+}
+
+.discover_membership_content_text{
+    padding: 23px 35px;
+    padding-bottom: 50px;
+}
+
+.discover_membership_content_text_p{
+    font-style: italic;
+}
+
+.discover_membership_container h2{
+    color: #1C1C1C;
+    font-family: "Canela Trial";
+    font-size: 60px;
+    font-weight: 300;
+    text-transform: capitalize;
+    margin-bottom: 55px;
+}
+
+
+
+
+@media (max-width: 1242px) {
+    .discover_membership_container h2{
+        font-size: 40px;
+    }
+    .journey_path_container h2 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    .journey_path_container {
+        padding: 80px 60px;
+        padding-bottom: 40px;
+    }
+    .discover_membership_content_text {
+        padding: 20px 20px;
+        padding-bottom: 40px;
+    }
+    .discover_membership_content_text_p {
+        font-size: 16px;
+    }
+    .discover_membership_content h3 {
+        font-size: 24px;
+    }
+    .discover_membership_content h4 {
+        font-size: 16px;
+    }
+    .discover_membership_content p {
+        font-size: 16px;
+    }
+    .discover_membership_content a {
+        font-size: 14px;
+    }
+    .ready_apply_content h2 {
+        font-size: 40px;
+    }
+    .ready_apply_content p {
+        font-size: 16px;
+    }
+    .ready_apply_content {
+        padding: 30px 0;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .journey_path_content_right {
+        left: 20px;
+    }
+    .journey_path_container {
+        padding-bottom: 20px;
+    }
+   
+}
+
+@media (max-width: 767px) {
+    .journey_path_content_right {
+        position: unset;
+        transform: unset;
+        text-align: center;
+        padding-top: 50px;
+    }
+    .journey_path_container {
+        padding: 80px 16px;
+    }
+    .journey_path_content_right h3 {
+        font-size: 22px;
+    }
+    .journey_path_content_right p {
+        font-size: 14px;
+    }
+    .journey_path_content_right button{
+        height: 40px;
+        max-width: 251px;
+        font-size: 14px;
+    }
+    .discover_membership_container {
+        padding: 16px;
+    }
+    .discover_membership_content h4 {
+        font-size: 12px;
+    }
+    .discover_membership_content p {
+        font-size: 14px;
+    }
+    .discover_membership_content a {
+        font-size: 12px;
+    }
+    .ready_apply_container {
+        padding: 60px 16px;
+    }
+    .ready_apply_content h2 {
+        font-size: 42px;
+    }
+    .ready_apply_content p {
+        font-size: 14px;
+    }
+}
